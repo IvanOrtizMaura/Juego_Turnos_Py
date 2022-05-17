@@ -36,7 +36,14 @@ def personajesDefault():
 # def crearPersonaje():
 #     nombre = input("Introduce el nombre de tu personaje ")
 #     vida = input("Introduce la vida de tu personaje ")
-
+def jugar():
+    print("1 → " , p1.getNombre())
+    print("2 →" , p2.getNombre())
+    print("3 →", p3.getNombre())
+    print("4 → " , p4.getNombre())
+    print("Elige una opcion → ")
+    opcion = 0
+    if 
     
 def menu():
     salir = False
