@@ -1,6 +1,8 @@
 from Personaje import Personaje
+import os
 from Tecnicas import Tecnica
 
+personajes =[]
 
 def pedirNumeroEntero():
     correcto = False;
@@ -30,20 +32,42 @@ def personajesDefault():
     p2.setTecnicas([t1,t2,t3,t4])
     p3.setTecnicas([t1,t2,t3,t4])
     p4.setTecnicas([t1,t2,t3,t4])
-    
+    personajes.append(p1)
+    personajes.append(p2)
+    personajes.append(p3)
+    personajes.append(p4)
 
+def getPersonajeElegido(personaje):
+    print(personaje.getNombre())
+    print(personaje.getVida())
+    for i in personaje.getTecnicas():
+        print("El daño es de ",i.getDano())
+        
+def confirmacionJufgador(personaje):
+    getPersonajeElegido(personaje)
+    
 
 # def crearPersonaje():
 #     nombre = input("Introduce el nombre de tu personaje ")
 #     vida = input("Introduce la vida de tu personaje ")
 def jugar():
-    print("1 → " , p1.getNombre())
-    print("2 →" , p2.getNombre())
-    print("3 →", p3.getNombre())
-    print("4 → " , p4.getNombre())
-    print("Elige una opcion → ")
-    opcion = 0
-    if 
+
+    bandera = True
+    for i in range(len(personajes)):
+        print (i,personajes[i].getNombre() )
+    
+    while bandera:
+        opcion =int(input("Introduce el numero de un personaje → "))
+        if opcion > len(personajes):
+            print("Error...")
+        else:
+            bandera = False
+    opcion = personajes[opcion]
+    print("Tu personaje es ", opcion.getNombre())
+    
+    os.system("cls")
+    confirmacionJufgador(opcion)
+
     
 def menu():
     salir = False
@@ -58,6 +82,7 @@ def menu():
         print("Elige una opción")
 
         opcion = pedirNumeroEntero()
+        os.system("cls")
 
         if opcion == 1:
             jugar()

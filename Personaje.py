@@ -29,3 +29,4 @@ class Personaje():
         for i in self.tecnica:
             nombreTecnica.append(i.getNombre())
         return nombreTecnica
+    
