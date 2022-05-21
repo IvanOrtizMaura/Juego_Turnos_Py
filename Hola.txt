@@ -1,0 +1,2 @@
+He intentado separarlo en clases, pero me da error al importarlos en el menu, 
+"form CPU import jugar" esto es lo que ponia para importarlo pero me daba error
